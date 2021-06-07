@@ -1,0 +1,18 @@
+<p>Enter Items</p>
+<input [(ngModel)] ="newTask" type="text" value="" placeholder="Enter Item">
+<button (click)="add()">add</button>
+
+
+
+<div *ngFor="let x of items; let index = index;">
+
+    <input type="text" value="{{x}}">
+      
+
+      <input (click)="edit(index)" type="button"
+        value="Edit"> 
+
+       <input (click)="delete(index)" type="button"
+        value="Delete"> 
+</div>
+
